@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weigth on other planets</title>
+</head>
+<body>
+    <div class="header__container">
+        <header>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT ME</li>
+                <li>CONTACT</li>
+            </ul>
+        </header>
+    </div>
+    <div class="alert alert-show" id="alert">
+        A simple alert
+    </div>
+    <div class="main">
+        <div class="form__container">
+            <form>
+                <input type="number" id="weight" placeholder="Weight">
+                <input list="Planets" placeholder="Planet" id='planet'>
+                <datalist id="Planets">
+                    <option value="Mercury"></option>
+                    <option value="Venus"></option>
+                    <option value="Earth"></option>
+                    <option value="Mars"></option>
+                    <option value="Jupiter"></option>
+                    <option value="Saturn"></option>
+                    <option value="Uranus"></option>
+                    <option value="Neptune"></option>
+                </datalist>
+                <input type="button" value="SEND" id="send">
+            </form>
+        </div>
+        <div class="result__container">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th class="col">Planet</th>
+                        <th class="col">Gravity</th>
+                        <th class="col">Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
