@@ -15,6 +15,30 @@ document.addEventListener('DOMContentLoaded', function (){
             case 'Mercury':
                 console.log('Weight:', weigth.value * 0.38);
                 break;
+            case 'Venus':
+                console.log('Weight:', weigth.value * 0.91);
+                break;
+            case 'Earth':
+                console.log('Weight:', weigth.value * 1);
+                break;
+            case 'Mars':
+                console.log('Weight:', weigth.value * 0.38);
+                break;
+            case 'Jupiter':
+                console.log('Weight:', weigth.value * 2.34);
+                break;
+            case 'Saturn':
+                console.log('Weight:', weigth.value * 1.06);
+                break;
+            case 'Uranus':
+                console.log('Weight:', weigth.value * 0.92);    
+                break;
+            case 'Neptune':
+                console.log('Weight::', weigth.value * 1.19);
+                break;
+            case 'Pluto':
+                console.log('Weight::', weigth.value * 0.06);
+                break;
         }
         console.log('Planet:', planet.value);
     }
