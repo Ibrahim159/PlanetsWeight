@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', function (){
     const planet = document.getElementById('planet');
     const btn = document.getElementById('send');
     const alert = document.getElementById('alert');
+    const table = document.getElementById('table');
 
     function showMessage(){
+        var res;
+        var gravity;
         if(weigth.value === '' || planet.value === ''){
             alert.classList.remove('alert-show');
             alert.innerText = 'Weight and Planet are requiered';
@@ -13,34 +16,49 @@ document.addEventListener('DOMContentLoaded', function (){
         alert.classList.add('alert-show');
         switch(planet.value){
             case 'Mercury':
-                console.log('Weight:', weigth.value * 0.38);
+                gravity = 3.7;
+                res = weigth.value * 0.38;
                 break;
             case 'Venus':
-                console.log('Weight:', weigth.value * 0.91);
+                gravity = 8.87;
+                res =  weigth.value * 0.91;
                 break;
             case 'Earth':
-                console.log('Weight:', weigth.value * 1);
+                gravity = 9.81;
+                res =  weigth.value * 1;
                 break;
             case 'Mars':
-                console.log('Weight:', weigth.value * 0.38);
+                gravity = 3.72;
+                res =  weigth.value * 0.38;
                 break;
             case 'Jupiter':
-                console.log('Weight:', weigth.value * 2.34);
+                gravity = 24.79;
+                res =  weigth.value * 2.34;
                 break;
             case 'Saturn':
-                console.log('Weight:', weigth.value * 1.06);
+                gravity = 10.44;
+                res =  weigth.value * 1.06;
                 break;
             case 'Uranus':
-                console.log('Weight:', weigth.value * 0.92);    
+                gravity = 8.87;
+                res =  weigth.value * 0.91;    
                 break;
             case 'Neptune':
-                console.log('Weight::', weigth.value * 1.19);
+                gravity = 11.15;
+                res =  weigth.value * 1.19;
                 break;
             case 'Pluto':
-                console.log('Weight::', weigth.value * 0.06);
+                gravity = 0.62;
+                res =  weigth.value * 0.06;
                 break;
         }
-        console.log('Planet:', planet.value);
+
+        const row = table.insertRow();
+        row.innerHTML = `
+            <td>${planet.value}</td>
+            <td>${gravity.valueOf()} m/s^2</td>
+            <td>${res.valueOf().toFixed(2)}</td>
+        `;
     }
 
     btn.onclick = showMessage;
