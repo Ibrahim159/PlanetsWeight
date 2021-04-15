@@ -60,10 +60,10 @@ header ul{
     justify-content: center;
     align-items: center;
     margin: 20px;
+    text-align: center;
 }
 
 .form__container p{
-    text-align: center;
     margin: 20px 0;
 }
 
@@ -118,7 +118,6 @@ header ul{
 
     .form__container {
         width: 100%;
-        text-align: center;
     }
 
     .send {
