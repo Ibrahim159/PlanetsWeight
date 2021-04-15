@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function (){
                 gravity = 0.62;
                 res =  weigth.value * 0.06;
                 break;
+            default:
+                return;
         }
 
         const row = table.insertRow();
